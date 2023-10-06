@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="16dp">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_item_game_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/fumo"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundedImageview"/>
+
+    <TextView
+        android:id="@+id/tv_item_game_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="4dp"
+        android:text="Game Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintStart_toEndOf="@id/iv_item_game_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_item_game_icon" />
+
+    <TextView
+        android:id="@+id/tv_item_game_publisher"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:text="Publisher"
+        android:textSize="14sp"
+        android:textColor="@color/blue"
+        app:layout_constraintStart_toEndOf="@id/iv_item_game_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_game_name"/>
+
+    <TextView
+        android:id="@+id/tv_item_game_rating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:text="5.0 ★"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/iv_item_game_icon"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_game_publisher"/>
+
+    <ImageView
+        android:id="@+id/iv_download"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/baseline_download_24"
+        app:layout_constraintStart_toEndOf="@id/tv_item_game_rating"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_game_publisher"/>
+
+    <TextView
+        android:id="@+id/tv_item_game_total_downloads"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="2dp"
+        android:text="999k downloads"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/iv_download"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_game_publisher" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:visibility="gone"
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_item_game_icon" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_item_game_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="description"
+        android:maxLines="10"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider1"/>
+
+    <ImageButton
+        android:id="@+id/btn_expand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/light_cyan"
+        android:src="@drawable/baseline_expand_more_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/divider1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
