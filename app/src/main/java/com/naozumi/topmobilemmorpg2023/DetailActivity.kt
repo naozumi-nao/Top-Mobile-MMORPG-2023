@@ -34,6 +34,7 @@ class DetailActivity : AppCompatActivity() {
             tvGameName.text = game.name
             tvGameRating.text = game.rating
             rbGameRating.rating = game.rating.toFloat()
+            tvGamePublisher.text = game.publisher
             tvGameDescription.text = game.description
             tvGameTotalDownloads.text = ViewUtils.formatGameDownloadsDetail(game.totalDownloads)
             tvGameReviewCount.text = game.reviewCount
